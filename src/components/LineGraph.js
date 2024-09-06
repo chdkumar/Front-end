@@ -39,9 +39,10 @@ const LineGraph = () => {
 
   return (
     <div>
-      <h2>Sales Line Chart</h2>
+      <h2>Sales Line Charts </h2>
       <Line data={chartData} />
     </div>
+
   );
 };
 
