@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import axios from "axios";
 
-const LineGraph = () => {
+const BarGraph = () => {
   const [chartData, setChartData] = useState({
     labels: [],
     datasets: [],
@@ -61,14 +61,14 @@ const LineGraph = () => {
 
   return (
     <div>
-      <h2>Sales Line Chart</h2>
+      <h2>Sales Bar Chart</h2>
       {error ? (
         <p style={{ color: "red" }}>{error}</p>
       ) : (
-        <Line data={chartData} />
+        <Bar data={chartData} />
       )}
     </div>
   );
 };
 
-export default LineGraph;
+export default BarGraph;

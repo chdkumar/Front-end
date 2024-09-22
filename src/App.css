@@ -36,3 +36,53 @@
     transform: rotate(360deg);
   }
 }
+/* App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  min-height: 100vh; /* Ensure the root element takes the full viewport height */
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+nav {
+  background-color: #333;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+.container {
+  padding: 2rem;
+  background-color: white; /* White background for content */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+

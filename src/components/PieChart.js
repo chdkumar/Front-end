@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Line } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 import axios from "axios";
 
-const LineGraph = () => {
+const PieChart = () => {
   const [chartData, setChartData] = useState({
     labels: [],
     datasets: [],
@@ -38,9 +38,22 @@ const LineGraph = () => {
               {
                 label: "Total Sales",
                 data: totalSales,
-                backgroundColor: "rgba(75,192,192,0.4)",
-                borderColor: "rgba(75,192,192,1)",
-                borderWidth: 1,
+                backgroundColor: [
+                  "#FF6384",
+                  "#36A2EB",
+                  "#FFCE56",
+                  "#4BC0C0",
+                  "#9966FF",
+                  "#FF9F40",
+                ], // Different colors for pie segments
+                hoverBackgroundColor: [
+                  "#FF6384",
+                  "#36A2EB",
+                  "#FFCE56",
+                  "#4BC0C0",
+                  "#9966FF",
+                  "#FF9F40",
+                ],
               },
             ],
           });
@@ -61,14 +74,14 @@ const LineGraph = () => {
 
   return (
     <div>
-      <h2>Sales Line Chart</h2>
+      <h2>Sales Pie Chart</h2>
       {error ? (
         <p style={{ color: "red" }}>{error}</p>
       ) : (
-        <Line data={chartData} />
+        <Pie data={chartData} />
       )}
     </div>
   );
 };
 
-export default LineGraph;
+export default PieChart;
